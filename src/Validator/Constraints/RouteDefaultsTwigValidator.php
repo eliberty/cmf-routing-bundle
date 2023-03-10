@@ -22,12 +22,9 @@ use Twig\Loader\LoaderInterface;
  */
 class RouteDefaultsTwigValidator extends ConstraintValidator
 {
-    private $controllerResolver;
+    private \Symfony\Component\HttpKernel\Controller\ControllerResolverInterface $controllerResolver;
 
-    /**
-     * @var LoaderInterface
-     */
-    private $twig;
+    private \Twig\Loader\LoaderInterface $twig;
 
     public function __construct(ControllerResolverInterface $controllerResolver, LoaderInterface $twig)
     {

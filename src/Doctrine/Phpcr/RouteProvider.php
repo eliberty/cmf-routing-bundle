@@ -36,15 +36,9 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class RouteProvider extends DoctrineProvider implements RouteProviderInterface
 {
-    /**
-     * @var CandidatesInterface
-     */
-    private $candidatesStrategy;
+    private \Symfony\Cmf\Component\Routing\Candidates\CandidatesInterface $candidatesStrategy;
 
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private ?\Psr\Log\LoggerInterface $logger = null;
 
     public function __construct(
         ManagerRegistry $managerRegistry,

@@ -24,12 +24,9 @@ use Symfony\Component\Validator\ConstraintValidator;
  */
 class RouteDefaultsTemplatingValidator extends ConstraintValidator
 {
-    private $controllerResolver;
+    private \Symfony\Component\HttpKernel\Controller\ControllerResolverInterface $controllerResolver;
 
-    /**
-     * @var EngineInterface
-     */
-    private $templating;
+    private \Symfony\Bundle\FrameworkBundle\Templating\EngineInterface $templating;
 
     public function __construct(ControllerResolverInterface $controllerResolver, EngineInterface $templating)
     {

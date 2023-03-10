@@ -30,24 +30,21 @@ class DynamicRouter extends BaseDynamicRouter
     /**
      * key for the request attribute that contains the route document.
      */
-    const ROUTE_KEY = 'routeDocument';
+    public const ROUTE_KEY = 'routeDocument';
 
     /**
      * key for the request attribute that contains the content document if this
      * route has one associated.
      */
-    const CONTENT_KEY = 'contentDocument';
+    public const CONTENT_KEY = 'contentDocument';
 
     /**
      * key for the request attribute that contains the template this document
      * wants to use.
      */
-    const CONTENT_TEMPLATE = 'template';
+    public const CONTENT_TEMPLATE = 'template';
 
-    /**
-     * @var RequestStack
-     */
-    private $requestStack;
+    private ?\Symfony\Component\HttpFoundation\RequestStack $requestStack = null;
 
     /**
      * Put content and template name into the request attributes instead of the

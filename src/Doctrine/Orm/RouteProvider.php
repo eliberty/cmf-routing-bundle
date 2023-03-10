@@ -32,10 +32,7 @@ use Symfony\Component\Routing\RouteCollection;
  */
 class RouteProvider extends DoctrineProvider implements RouteProviderInterface
 {
-    /**
-     * @var CandidatesInterface
-     */
-    private $candidatesStrategy;
+    private \Symfony\Cmf\Component\Routing\Candidates\CandidatesInterface $candidatesStrategy;
 
     public function __construct(ManagerRegistry $managerRegistry, CandidatesInterface $candidatesStrategy, $className)
     {

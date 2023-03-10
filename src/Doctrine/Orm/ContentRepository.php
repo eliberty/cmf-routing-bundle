@@ -45,7 +45,7 @@ class ContentRepository extends DoctrineProvider implements ContentRepositoryInt
      */
     public function findById($id)
     {
-        list($model, $modelId) = $this->getModelAndId($id);
+        [$model, $modelId] = $this->getModelAndId($id);
 
         return $this->getObjectManager()->getRepository($model)->find($modelId);
     }
