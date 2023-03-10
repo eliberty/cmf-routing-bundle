@@ -1,5 +1,5 @@
 {
-    "name": "symfony-cmf/routing-bundle",
+    "name": "eliberty/cmf-routing-bundle",
     "type": "symfony-bundle",
     "description": "Symfony RoutingBundle",
     "keywords": [
@@ -14,10 +14,16 @@
             "homepage": "https://github.com/symfony-cmf/RoutingBundle/contributors"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://e-liberty.repo.repman.rpstack.com"
+        }
+    ],
     "require": {
-        "php": "^7.1",
-        "symfony-cmf/routing": "^2.1.0",
-        "symfony/framework-bundle": "^2.8 || ^3.3 || ^4.0",
+        "php": "^7.4|^8.0",
+        "eliberty/cmf-routing": "^2.1.0",
+        "symfony/framework-bundle": "^3.3 || ^4.0",
         "twig/twig": "^1.35 || ^2.4.4"
     },
     "require-dev": {
@@ -28,7 +34,7 @@
         "doctrine/orm": "^2.5",
         "symfony-cmf/testing": "^2.1.11",
         "doctrine/data-fixtures": "^1.0.0",
-        "symfony/validator": "^2.8 || ^3.3 || ^4.0"
+        "symfony/validator": "^3.3 || ^4.0"
     },
     "suggest": {
         "doctrine/phpcr-odm": "To enable support for the PHPCR ODM documents (^1.4)",
